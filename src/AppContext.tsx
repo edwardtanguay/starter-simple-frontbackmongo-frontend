@@ -3,8 +3,9 @@ import { createContext } from 'react';
 import axios from 'axios';
 import { IJob, ISkill } from './interfaces';
 
-const jobsUrl = 'https://edwardtanguay.vercel.app/share/jobs.json';
-const skillsUrl = 'https://edwardtanguay.vercel.app/share/skills.json';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const jobsUrl = `${backendUrl}/jobs`;
+const skillsUrl = `${backendUrl}/skills`;
 
 interface IAppContext {
 	appTitle: string;
